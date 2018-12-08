@@ -8,8 +8,10 @@ while 1
       break;
    end
    A = str2num(user_input);
-   if validate_angles(A)
-      command = strcat('#16 P ', int2str(A(1)), ' #17 P ', int2str(A(2)), ' #20 P ', int2str(A(3)), ' #21 P ', int2str(A(4)), ' #22 P ', int2str(A(5)), ' #23 P ', int2str(A(6)), ' T5000\n');
+   translated_values = translate_values(A);
+      
+   if validate_angles(translated_values)
+      command = strcat('#16 P ', int2str(translated_values(1)), ' #17 P ', int2str(translated_values(2)), ' #20 P ', int2str(translated_values(3)), ' #21 P ', int2str(translated_values(4)), ' #22 P ', int2str(translated_values(5)), ' #23 P ', int2str(translated_values(6)), ' T5000\n');
       disp(command);
    end
    

@@ -12,15 +12,9 @@ while 1
       
    if validate_angles(translated_values)
       command = strcat('#16 P ', int2str(translated_values(1)), ' #17 P ', int2str(translated_values(2)), ' #20 P ', int2str(translated_values(3)), ' #21 P ', int2str(translated_values(4)), ' #22 P ', int2str(translated_values(5)), ' #23 P ', int2str(translated_values(6)), ' T3000\n');
-      %disp(command);
       fprintf(s, '%s', command);
    end
    
-   %if user_input >= 100 && user_input <= 3000
-       %command = strcat('#16 P ', int2str(user_input), 'S 400\n');
-       %fprintf(s, '%s', command);
-       %disp(command);
-   %end
 end
 
 fclose(s);
